@@ -1,28 +1,28 @@
 #!/system/bin/sh
 # This script is needed to automatically set device props.
 
-load_sweet()
+load_courbet()
 {
-    resetprop "ro.product.model" "M2101K6G"
-    resetprop "ro.product.vendor.model" "M2101K6G"
-    resetprop "ro.product.name" "sweet"
-    resetprop "ro.build.product" "sweet"
-    resetprop "ro.product.device" "sweet"
-    resetprop "ro.product.system.device" "sweet"
-    resetprop "ro.product.vendor.device" "sweet"
-    resetprop "ro.vendor.product.device" "sweet"
+    resetprop "ro.product.model" "M2101K9AG"
+    resetprop "ro.product.vendor.model" "M2101K9AG"
+    resetprop "ro.product.name" "courbet"
+    resetprop "ro.build.product" "courbet"
+    resetprop "ro.product.device" "courbet"
+    resetprop "ro.product.system.device" "courbet"
+    resetprop "ro.product.vendor.device" "courbet"
+    resetprop "ro.vendor.product.device" "courbet"
 }
 
-load_sweetin()
+load_courbetin()
 {
-    resetprop "ro.product.model" "M2101K6I"
-    resetprop "ro.product.vendor.model" "M2101K6I"
-    resetprop "ro.product.name" "sweetin"
-    resetprop "ro.build.product" "sweetin"
-    resetprop "ro.product.device" "sweetin"
-    resetprop "ro.product.system.device" "sweetin"
-    resetprop "ro.product.vendor.device" "sweetin"
-    resetprop "ro.vendor.product.device" "sweetin"
+    resetprop "ro.product.model" "M2101K9AI"
+    resetprop "ro.product.vendor.model" "M2101K9AI"
+    resetprop "ro.product.name" "courbetin"
+    resetprop "ro.build.product" "courbetin"
+    resetprop "ro.product.device" "courbetin"
+    resetprop "ro.product.system.device" "courbetin"
+    resetprop "ro.product.vendor.device" "courbetin"
+    resetprop "ro.vendor.product.device" "courbetin"
 }
 
 variant=$(getprop ro.boot.hwc)
@@ -30,13 +30,13 @@ echo $variant
 
 case $variant in
     "GLOBAL")
-        load_sweet
+        load_courbet
         ;;
     "INDIA")
-        load_sweetin
+        load_courbetin
         ;;
     *)
-        load_sweet
+        load_courbet
         ;;
 esac
 
